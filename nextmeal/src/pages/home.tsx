@@ -18,6 +18,10 @@ function Home(){
         }
     };
 
+    const handleSearch = () => {
+
+    };
+
     const handleClear = () => {
         setItemList([]);
         setDisplayText('');
@@ -38,6 +42,7 @@ function Home(){
                             </div>
                             <div className="buttons-food"> 
                                 <button onClick={handleAdd} disabled={inputValue.trim() === ''}>Add</button>
+                                <button onClick={handleSearch} disabled={itemList.length === 0}>Search</button>
                                 <button onClick={handleClear}>Clear</button>
                             </div>
                         </div>
@@ -49,9 +54,6 @@ function Home(){
                             </ul>
                         </div>
                     </div>
-                </section>
-                <section className="pre-select-section">
-                    
                 </section>
             </div>
         </>
